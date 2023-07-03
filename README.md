@@ -1,1 +1,1 @@
-PidginPal Translator 
+PidginPal Translator
