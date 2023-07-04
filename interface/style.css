@@ -1,0 +1,31 @@
+/* Add your CSS styles here */
+
+/* Body styles */
+body {
+    front-family: Arial, sans-serif;
+}
+
+/* Heading styles */
+h1 {
+    color: #333;
+}
+
+/* Button styles */
+button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Output paragraph styles */
+p {
+    margin-top: 10px;
+    font-weight: bold;
+}
