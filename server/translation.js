@@ -1,10 +1,19 @@
-function translateText(text) {
-    // Add your translation logic here
-    // This function should take the preprocessed English text as input and
-    //return the translated Pidgin text
+const { Translate } = require('@google-cloud/translate').v2;
 
-    // Placeholder implementation - Echo the input text
-    return text;
+// Instantiate the Translation client
+const translate = new Translate();
+
+async function translateText(text) {
+    const targetLanguage = 'pcm'; //Pidgin language code
+
+    try {
+        // Translate the text to pidgin
+        const [Translation] = await translate.translate(text, targetLanguage);
+        return Translation;
+    }   catch (error) {
+        console.error('Translation error', error);
+        return '';
+    }
 }
 
 module.exports = {
