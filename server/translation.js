@@ -1,21 +1,44 @@
-const { Translate } = require('@google-cloud/translate').v2;
+const axios = require('axios');
 
-// Instantiate the Translation client
-const translate = new Translate();
+// Define the MyMemory API URL
+const apiUrl = 'https://api.mymemory.translated.net/get';
+
+// Define your MyMemory API key
+const apiKey = 'e1559e800b4a701c8cc0';
+
+// Define the URL of your local server
+const localServerUrl = 'http://localhost:3000/translate';
 
 async function translateText(text) {
-    const targetLanguage = 'pcm'; //Pidgin language code
+  try {
+    // Make a GET request to the MyMemory API with the text and API key
+    const apiResponse = await axios.get(apiUrl, {
+      params: {
+        q: text,
+        langpair: 'en|pis',
+        key: apiKey
+      },
+    });
 
-    try {
-        // Translate the text to pidgin
-        const [Translation] = await translate.translate(text, targetLanguage);
-        return Translation;
-    }   catch (error) {
-        console.error('Translation error', error);
+    // Check if translation is available
+    if (
+      apiResponse.data && 
+      apiResponse.data.responseData && 
+      apiResponse.data.responseData.translatedText
+    ) {
+      const translatedText = apiResponse.data.responseData.translatedText;
+      return translatedText;
+
+ } else {
+        console.error('Translation not available from MyMemory API.');
         return '';
     }
+ } catch (error) {
+    console.error('Translation error:', error.message);
+    return '';
+ }
 }
 
 module.exports = {
-    translateText,
+ translateText
 };

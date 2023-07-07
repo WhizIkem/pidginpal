@@ -1,20 +1,25 @@
 function preprocessText(text) {
-    // Text cleaning: Remove non-alphanumeric characters and convert to lowercase
-    const cleanedText = text.replace(/[^a-zA-Z0-9 ]/g, '').toLowerCase();
+  if (!text) {
+      console.error('Invalid input text.');
+      return '';
+  }
 
-    // Tokenization: Split the text into words
-    const tokens = cleanedText.split(' ');
+  // Text cleaning: Remove non-alphanumeric characters and convert to lowercase
+  const cleanedText = text.replace(/[^a-zA-Z0-9 ]/g, '').toLowerCase();
 
-    // Example: Remove stop words (adjust this list based on your requirements)
-    const stopWords = ['a', 'an', 'the', 'is', 'are', 'and', 'of'];
-    const filteredTokens = tokens.filter(token => !stopWords.includes(token));
+  // Tokenization: Split the text into words
+  const tokens = cleanedText.split(' ');
 
-    // Join the filtered tokens back into a preprocessed text string
-    const preprocessedText = filteredTokens.join(' ');
+  // Example: Remove stop words (adjust this list based on your requirements)
+  const stopWords = ['a', 'an', 'the', 'is', 'are', 'and', 'of'];
+  const filteredTokens = tokens.filter(token => !stopWords.includes(token));
 
-    return preprocessedText;
+  // Join the filtered tokens back into a preprocessed text string
+  const preprocessedText = filteredTokens.join(' ');
+
+  return preprocessedText.trim(); // Trim any leading/trailing spaces
 }
 
 module.exports = {
-    preprocessText
+  preprocessText
 };

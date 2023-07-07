@@ -1,35 +1,46 @@
 const express = require('express');
 const { translateText } = require('./translation');
 const { preprocessText } = require('./preprocessor');
+const path = require('path');
 
 const app = express();
 const port = 3000;
 
 app.use(express.json());
 
-//  const { text } = req.body;
-app.route('/translate')
-.get((req, res) => {
-    res.send('This endpoint only accepts POST requests.');
-  })
-  .post((req, res) => {
+// Serve static files from the "client" directory
+app.use(express.static(path.join(__dirname, '../client')));
+
+// Handle the root URL
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/index.html'));
+});
+
+// Handle the translation endpoint
+app.post('/translate', (req, res) => {
     const { text } = req.body;
+
     // Preprocess the input text
-    console.log('Request body', req.body); // Verify the request body contents
     const preprocessedText = preprocessText(text);
 
     // Translate the preprocessed text
-    const translatedText = translateText(preprocessedText);
-
-    // Send the translated text as a response
-    res.json({ translatedText: translatedText });
+    translateText(preprocessedText)
+        .then(translatedText => {
+            // Send the translated text as a response
+            res.json({ translatedText });
+        })
+        .catch(error => {
+            console.error('Translation error:', error);
+            res.status(500).json({ error: 'Translation failed' });
+        });
 });
 
 // Additional route
-app.get('/', (req, res) => {
-    res.send('Welcome to PidginPal!');
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/index.html'));
 });
+
 // Start the server
 app.listen(port, () => {
-    console.log('Server is running on port ${port}');
+    console.log(`Server is running on port ${port}`);
 });
