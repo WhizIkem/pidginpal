@@ -31,6 +31,10 @@ To set up and use the PidginPal Translator locally, follow these steps:
 2. Install dependencies using `npm install`.
 3. Start the backend server with `npm start`.
 
+### Translation API 
+
+The MyMemory Translation API was integrated to provide language translation services from English to Pidgin.
+
 ## Configuration
 
 No specific configuration steps are required for running the PidginPal Translator locally. However, API credentials or environment variables may need to be configured for deployment.
