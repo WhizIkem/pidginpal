@@ -1,0 +1,133 @@
+/* Designing the user interface */
+
+/* Button styles */
+button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Output paragraph styles */
+p {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Container styles */
+.container {
+    width: 1440px;
+    height: 100px;
+    flex-shrink: 0;
+    background: #000;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title {
+    color: #fff;
+    font-family: Inter, Arial, sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 70px;
+}
+
+.inputLayout {
+    width: 1300px;
+    height: 200px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    border: 2px solid #d9d9d9;
+    background: #fff;
+    margin-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+}
+
+.inputTextarea {
+    width: 99%;
+    height: 90%;
+    padding: 10px;
+    font-family: Inter, Arial, sans-serif;
+    font-size: 32px;
+    color: #333;
+    border: none;
+    background: none;
+    resize: none;
+}
+
+.inputTextarea::placeholder {
+    color: #999;
+    font-family: Inter, Arial, sans-serif;
+    font-size: 32px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+
+.outputLayout {
+    width: 1300px;
+    height: 200px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    border: 2px solid #d9d9d9;
+    background: #fff;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.outputText {
+    font-size: 32px;
+    color: #333;
+    text-align: left;
+    font-family: Inter, Arial, sans-serif;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 10px;
+}
+
+[data-placeholder]::before {
+    content: attr(data-placeholder);
+    color: #999;
+    font-style: italic;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+.button {
+    width: 1300px;
+    height: 100px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #16b1256;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button {
+    color: #FFF;
+    font-family: Inter, Arial, sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
