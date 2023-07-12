@@ -213,11 +213,6 @@ nav li:last-child {
     vertical-align: middle;
 }
 
-.footer-img-2 {
-    margin-right: -350px; /* add margin between the images */
-    vertical-align: middle;
-}
-
 /* Footer style */
 .footer-copyright {
     color: #fff;

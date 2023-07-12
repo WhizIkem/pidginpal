@@ -10,14 +10,14 @@
     position: fixed;
     top: 0;
     left: 0%;
-}
-
-/* Update the .rectangle class for other pages */
-body:not(.landing) .rectangle {
+  }
+  
+  /* Update the .rectangle class for other pages */
+  body:not(.landing) .rectangle {
     background: rgba(0, 0, 0, 1); /* Set the background opacity to 100% on other pages */
-}
-
-.translation {
+  }
+  
+  .translation {
     color: #FFF;
     font-family: Roboto, Arial, sans-serif;
     font-size: 32px;
@@ -26,10 +26,10 @@ body:not(.landing) .rectangle {
     line-height: normal;
     margin-top: 39px;
     margin-left: 70px;
-}
-
-/* PidginPal logo */
-.logo {
+  }
+  
+  /* PidginPal logo */
+  .logo {
     width: 45px;
     height: 56px;
     flex-shrink: 0;
@@ -40,9 +40,9 @@ body:not(.landing) .rectangle {
     font-weight: bolder;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add a box-shadow effect */
     filter: brightness(1.2) saturate(20); /* Adjust brightness and saturation */
-}
-
-.nav-link {
+  }
+  
+  .nav-link {
     color: #FFF;
     font-family: Roboto, Arial, sans-serif;
     font-size: 32px;
@@ -50,60 +50,56 @@ body:not(.landing) .rectangle {
     font-weight: 500;
     line-height: normal;
     text-decoration: none; /* Remove underline */
-}
-
-nav ul {
+  }
+  
+  nav ul {
     padding: 0;
-}
-
-nav li {
+  }
+  
+  nav li {
     display: inline-block;
-    margin-right: 100px; /* Add 100px margin between each list item */
-}
-
-nav li:last-child {
+    margin-right: 100px; /* Adjust margin for smaller screens */
+  }
+  
+  nav li:last-child {
     margin-right: 100px; /* Remove margin for the last list item */
-}
-
-.nav-link:hover {
+  }
+  
+  .nav-link:hover {
     text-decoration: underline; /* Add underline on hover */
-}
-
-/* Add styles for active links on respective pages */
-.nav-link.active {
+  }
+  
+  /* Add styles for active links on respective pages */
+  .nav-link.active {
     color: #213fda; /* Example: Change the text color to red */
     font-weight: bold;
-}
-
-
-
-/* Designing the user interface */
-
-
-/* Button styles */
-button {
+  }
+  
+  /* Designing the user interface */
+  
+  /* Button styles */
+  button {
     margin-top: 10px;
     padding: 8px 16px;
     background-color: #4CAF50;
     color: #fff;
     border: none;
     cursor: pointer;
-}
-
-button:hover {
+  }
+  
+  button:hover {
     background-color: #45a049;
-}
-
-/* Output paragraph styles */
-p {
+  }
+  
+  /* Output paragraph styles */
+  p {
     margin-top: 10px;
     font-weight: bold;
-}
-
-
-
-.inputLayout {
-    width: 1300px;
+  }
+  
+  .inputLayout {
+    width: 90%;
+    max-width: 1300px;
     height: 200px;
     flex-shrink: 0;
     border-radius: 15px;
@@ -114,10 +110,10 @@ p {
     margin-right: auto;
     display: flex;
     align-items: center;
-}
-
-.inputTextarea {
-    width: 99%;
+  }
+  
+  .inputTextarea {
+    width: 100%;
     height: 90%;
     padding: 10px;
     font-family: Inter, Arial, sans-serif;
@@ -126,9 +122,9 @@ p {
     border: none;
     background: none;
     resize: none;
-}
-
-.inputTextarea::placeholder {
+  }
+  
+  .inputTextarea::placeholder {
     color: #999;
     font-family: Inter, Arial, sans-serif;
     font-size: 32px;
@@ -137,10 +133,11 @@ p {
     line-height: normal;
     margin-left: 40px;
     margin-top: 20px;
-}
-
-.outputLayout {
-    width: 1300px;
+  }
+  
+  .outputLayout {
+    width: 90%;
+    max-width: 1300px;
     height: 200px;
     flex-shrink: 0;
     border-radius: 15px;
@@ -149,9 +146,9 @@ p {
     margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
-}
-
-.outputText {
+  }
+  
+  .outputText {
     font-size: 32px;
     color: #333;
     text-align: left;
@@ -159,18 +156,19 @@ p {
     font-weight: 400;
     line-height: normal;
     margin-left: 10px;
-}
-
-[data-placeholder]::before {
+  }
+  
+  [data-placeholder]::before {
     content: attr(data-placeholder);
     color: #999;
     font-style: italic;
     font-weight: 400;
     line-height: normal;
   }
-
-.button {
-    width: 1300px;
+  
+  .button {
+    width: 90%;
+    max-width: 1300px;
     height: 100px;
     flex-shrink: 0;
     border-radius: 10px;
@@ -181,9 +179,9 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.button {
+  }
+  
+  .button {
     color: #FFF;
     font-family: Inter, Arial, sans-serif;
     font-size: 32px;
@@ -192,6 +190,23 @@ p {
     line-height: normal;
   }
 
+  /* Add media query for smaller screen sizes */
+@media (max-width: 768px) {
+    .translation {
+      font-size: 24px; /* Adjust font size for smaller screens */
+    }
+  
+    .logo {
+      width: 30px; /* Adjust logo size for smaller screens */
+      height: 38px;
+    }
+  
+    .nav-link {
+      font-size: 24px; /* Adjust font size for smaller screens */
+      margin-right: 10px; /* Adjust margin-right for smaller screens */
+    }
+  }
+  
   /* footer */
   .rectangle-two {
     width: 100%;
@@ -201,27 +216,25 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: absolute;
-    top: 924px;
-    left: 0;
-}
-
-.footer-img {
+    margin-top: 30px;
+  }
+  
+  .footer-img {
     margin-right: 30px; /* add margin between the images */
     vertical-align: middle;
-}
-
-/* Footer style */
-.footer-copyright {
+  }
+  
+  /* Footer style */
+  .footer-copyright {
     color: #fff;
     font-family: Roboto, Arial, sans-serif;
     font-size: 32px;
     font-weight: 500;
     line-height: normal;
     margin: 10px 30px;
-}
-
-.footer-contact {
+  }
+  
+  .footer-contact {
     color: #fff;
     font-family: Roboto, Arial, sans-serif;
     font-size: 32px;
@@ -229,4 +242,12 @@ p {
     line-height: normal;
     margin-right: -350px;
     margin-top: 30px;
-}
+  }
+  
+  /* Add media query for smaller screen sizes */
+@media (max-width: 768px) {
+    .footer-copyright,
+    .footer-contact {
+      font-size: 24px; /* Adjust font size for smaller screens */
+    }
+  }
