@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>PidginPal Translator</title>
+    <link rel="stylesheet" type="text/css" href="translate-style.css">
+</head>
+<body>
+    <div class="rectangle">
+        <img src="assets/logo.svg" alt="logo" class="logo">
+        <p class="translation">English to Pidgin English Translator</p>
+        <nav>
+          <ul>
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="features.html" class="nav-link active">Features</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+          </ul>
+        </nav>
+      </div>
+    
+    
+    <!-- Input text area-->
+    <div class="inputLayout">
+        <textarea id="inputText" class="inputTextarea" placeholder="Enter text to Translate"></textarea>
+    </div>
+
+    <!-- Output paragraph-->
+    <div class="outputLayout">
+        <p id="outputText" class="outputText" contenteditable="true" data-placeholder="Translated text"></p>
+    </div>
+
+    <!-- Translate button-->
+    <button class="button" id="translateButton">Translate</button>
+    <br>
+
+    <footer>
+        <div class="rectangle-two">
+            <p class="footer-copyright">
+                &copy; 2023 PidginPal Translator. All rights reserved.
+            </p>
+            <p class="footer-contact">Contact us:</p>
+            </a>
+            <a href="https://github.com/whizikem">
+            <img src="assets/GitHub.svg" class="footer-img">
+        </a>
+        </div>
+    </footer>
+
+
+    <script src="translate-script.js"></script>
+</body>
+</html>
