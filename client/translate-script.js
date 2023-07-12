@@ -41,3 +41,15 @@ async function translateText(text) {
         return '';
     }
 }
+
+ // Set the "active" class for the "Translate" link
+ document.addEventListener("DOMContentLoaded", function() {
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(function(link) {
+      if (link.getAttribute('href') === 'translate.html') {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+  });
