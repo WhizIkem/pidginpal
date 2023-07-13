@@ -1,3 +1,4 @@
+// Purpose: Preprocess text for NLP tasks
 function preprocessText(text) {
   if (!text) {
       console.error('Invalid input text.');
@@ -20,6 +21,7 @@ function preprocessText(text) {
   return preprocessedText.trim(); // Trim any leading/trailing spaces
 }
 
+// Export the preprocessText function
 module.exports = {
   preprocessText
 };

@@ -1,3 +1,4 @@
+// Load the axios library, to make HTTP requests
 const axios = require('axios');
 
 // Define the MyMemory API URL
@@ -9,6 +10,7 @@ const apiKey = 'e1559e800b4a701c8cc0';
 // Define the URL of your local server
 const localServerUrl = 'http://localhost:3000/translate';
 
+// Translate the text using the MyMemory API
 async function translateText(text) {
   try {
     // Make a GET request to the MyMemory API with the text and API key
@@ -39,6 +41,7 @@ async function translateText(text) {
  }
 }
 
+// Export the translateText function
 module.exports = {
  translateText
 };

@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     homeLink.addEventListener('click', handleHomeLinkClick);
 });
 
+// Handle the click event on the home link
 function handleHomeLinkClick(event) {
     const currentPage = window.location.href;
     const landingPage = 'index.html';
@@ -13,6 +14,7 @@ function handleHomeLinkClick(event) {
     }
 }
 
+// Add an event listener to the DOMContentLoaded event
 document.addEventListener('DOMContentLoaded', () => {
     const currentPage = window.location.pathname;
 
