@@ -1,7 +1,7 @@
 /* About page style */
 
 
-/* About page style */
+/* Define the background layout */
 .background-layout {
     width: 100%;
     min-height: 100vh;
@@ -13,7 +13,7 @@
     left: 0;
   }
 
-  /* header copied from style.css */
+  /* Define the header style */
   .rectangle {
     width: 100%;
     height: 100px;
@@ -32,6 +32,7 @@ body:not(.landing) .rectangle {
     background: rgba(0, 0, 0, 1); /* Set the background opacity to 100% on other pages */
 }
 
+/* Define the translation text style */
 .translation {
     color: #FFF;
     font-family: Roboto, Arial, sans-serif;
@@ -43,7 +44,7 @@ body:not(.landing) .rectangle {
     margin-left: 70px;
 }
 
-/* PidginPal logo */
+/* Define the PidginPal logo style */
 .logo {
     width: 45px;
     height: 56px;
@@ -57,6 +58,7 @@ body:not(.landing) .rectangle {
     filter: brightness(1.2) saturate(20); /* Adjust brightness and saturation */
 }
 
+/* Define the navigation bar style */
 .nav-link {
     color: #FFF;
     font-family: Roboto, Arial, sans-serif;
@@ -90,6 +92,7 @@ nav li:last-child {
     font-weight: bold;
 }
 
+/* Define the rectangle layout style */
 .rectangle-layout {
     width: 100%;
     max-width: 1300px;
@@ -102,6 +105,7 @@ nav li:last-child {
     margin-left: 70px;
   }
   
+  /* Define the text layout style */
   .text-layout {
     display: flex;
     width: 1250px;
@@ -123,6 +127,7 @@ h2 {
     margin-top: 10px;
 }
 
+/* Define the rectangle layout style */
 .rectangle-layout-two {
     width: 100%;
     max-width: 1300px;
@@ -135,6 +140,7 @@ h2 {
     margin-left: 70px;
 }
 
+/* Define the text layout style */
 .text-layout-two {
     display: flex;
     width: 1250px;
@@ -151,6 +157,7 @@ h2 {
     margin-left: 25px;
 }
 
+/* Define the rectangle layout style */
 .rectangle-layout-three {
     width: 100%;
     max-width: 1300px;
@@ -163,6 +170,7 @@ h2 {
     margin-left: 70px;
   }
   
+  /* Define the text layout style */
   .text-layout-three {
     display: flex;
     width: 1250px;
@@ -179,6 +187,7 @@ h2 {
     margin-left: 25px;
 }
 
+/* Define the rectangle layout style */
 .rectangle-layout-four {
     width: 100%;
     max-width: 1300px;
@@ -191,6 +200,7 @@ h2 {
     margin-left: 70px;
 }
 
+/* Define the text layout style */
 .text-layout-four {
     display: flex;
     width: 1250px;
@@ -208,10 +218,10 @@ h2 {
 }
 
 .text-layout-four p {
-    margin-bottom: -10px; /* Adjust the value as desired */
+    margin-bottom: -35px; /* Adjust the value as desired */
 }
 
-  /* footer */
+  /* Define the footer layout style */
   .rectangle-two {
     width: 100%;
     height: 100px;
@@ -230,7 +240,7 @@ h2 {
     vertical-align: middle;
 }
 
-/* Footer style */
+/* Define the footer copyright style */
 .footer-copyright {
     color: #fff;
     font-family: Roboto, Arial, sans-serif;
@@ -240,6 +250,7 @@ h2 {
     margin: 10px 30px;
 }
 
+/* Define the footer contact style */
 .footer-contact {
     color: #fff;
     font-family: Roboto, Arial, sans-serif;
@@ -248,4 +259,26 @@ h2 {
     line-height: normal;
     margin-right: -350px;
     margin-top: 30px;
+}
+
+/* Holberton style */
+.Holberton {
+    flex-direction: column;
+    flex-shrink: 0;
+    color: black;
+    font-family: Roboto;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.Holberton a {
+    color: black;
+    text-decoration: underline;
+}
+
+.Holberton a:hover {
+    color: black;
+    text-decoration: none;
 }

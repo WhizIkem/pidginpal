@@ -1,7 +1,10 @@
 // Features.js
+
+// Import the React library and necessary dependencies
 import React from 'react';
 import PidginPalHeader from './PidginPalHeader';
 
+// Create a functional component to display the features page
 const Features = () => {
   return (
     <>
@@ -12,4 +15,6 @@ const Features = () => {
   );
 };
 
+
+// Export the Features component
 export default Features;

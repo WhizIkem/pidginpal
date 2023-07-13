@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     translateButton.addEventListener('click', handleTranslation);
 });
 
+// Handle the click event on the translate button
 async function handleTranslation() {
     // Get the input text from the textarea
     const inputText = document.getElementById('inputText').value;
@@ -14,12 +15,14 @@ async function handleTranslation() {
     displayTranslatedText(translatedText);
 }
 
+// Display the translated text
 function displayTranslatedText(translatedText) {
     const outputText = document.getElementById('outputText');
     outputText.textContent = translatedText;
     outputText.removeAttribute('data-placeholder');
 }
 
+// Call the translation API
 async function translateText(text) {
     try {
         const response = await fetch('/translate', {

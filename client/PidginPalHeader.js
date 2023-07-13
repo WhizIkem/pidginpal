@@ -1,8 +1,10 @@
 // PidginPalHeader.js
 
+// Import the React library and necessary dependencies
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+// Create a functional component to display the header
 const PidginPalHeader = ({ activeLink }) => {
   return (
     <div className="rectangle">
@@ -31,4 +33,5 @@ const PidginPalHeader = ({ activeLink }) => {
   );
 };
 
+// Export the PidginPalHeader component
 export default PidginPalHeader;
