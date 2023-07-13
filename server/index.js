@@ -1,3 +1,4 @@
+//desc: This is the main file of the server. It contains the code for the server to run.
 const express = require('express');
 const { translateText } = require('./translation');
 const { preprocessText } = require('./preprocessor');
