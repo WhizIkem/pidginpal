@@ -84,7 +84,7 @@ Contributions are welcome! Please follow these steps to contribute:
 
 ## Timeline and Personal Reflection
 
-I started the development of the PidginPal Translator on June 30th. Over the course of two weeks, I worked diligently to bring the project to fruition, from initial planning and implementation to testing and deployment.
+I started the development of the PidginPal Translator on June 26th. Over the course of three weeks, I worked diligently to bring the project to fruition, from initial planning and implementation to testing and deployment.
 
 This project has been a journey of personal growth and technical development. It has allowed me to explore the intersection of language, culture, and technology. I am proud of what I have accomplished thus far, and I am excited to continue refining and enhancing the PidginPal Translator in the future.
 
